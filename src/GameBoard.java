@@ -21,8 +21,6 @@ public class GameBoard {
         int y = 0;
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < this.height; j++) {
-                System.out.println(j);
-                System.out.println(y);
                 this.screenMatrix[j][y] = boarderOutline;
             }
             y = this.width - 1;
