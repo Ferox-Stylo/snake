@@ -1,7 +1,7 @@
 public class Apple extends BasicProperties {
 
 
-    public static int score = 0;
+    static int score = 0;
 
     public Apple() {
         setEmoji("\uD83C\uDF4E");

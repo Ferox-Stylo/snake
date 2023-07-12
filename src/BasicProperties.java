@@ -1,6 +1,7 @@
 public class BasicProperties {
 
-    private int x, y;
+    private int x;
+    private int y;
     private String emoji;
 
 

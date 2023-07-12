@@ -9,7 +9,7 @@ public class Main {
 
 
         GameBoard board = new GameBoard(SCREEN_WIDTH, SCREEN_HEIGHT);
-        board.InitScreen();
+        board.initScreen();
 
         Snake snake = new Snake(board);
         board.setObjectOnLocation(snake, snake.getX(), snake.getY());
@@ -18,8 +18,8 @@ public class Main {
         Apple apple = new Apple();
         apple.addRandomApple(board, apple);
 
-        while(true) {
-            board.PrintScreen();
+        while (true) {
+            board.printScreen();
             snake.moveSnake(board, snake, new Scanner(System.in).nextLine().toLowerCase());
 
             if (!Apple.checkForApple(board)) {

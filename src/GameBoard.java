@@ -12,7 +12,7 @@ public class GameBoard {
         this.screenMatrix = new String[this.height][this.width];
     }
 
-    public void InitScreen() {
+    public void initScreen() {
         for (int i = 0; i < this.height; i++) {
             for (int j = 0; j < this.width; j++) {
                 this.screenMatrix[i][j] = "⬜";
@@ -34,7 +34,7 @@ public class GameBoard {
         }
     }
 
-    public void PrintScreen() {
+    public void printScreen() {
         for (int i = 0; i < this.height; i++) {
             for (int j = 0; j < this.width; j++) {
                 System.out.print(this.screenMatrix[i][j]);
@@ -42,16 +42,15 @@ public class GameBoard {
             System.out.println();
         }
         System.out.print(boarderOutline + "\uD83C\uDD68\uD83C\uDD5E\uD83C\uDD64\uD83C\uDD61 \uD83C\uDD62\uD83C\uDD52\uD83C\uDD5E\uD83C\uDD61\uD83C\uDD54  " + Apple.getScore());
-        if (Apple.getScore() < 10)
-            System.out.print(" ");
-        System.out.println("                       "+ boarderOutline);
+        if (Apple.getScore() < 10) System.out.print(" ");
+        System.out.println("                       " + boarderOutline);
         for (int j = 0; j < 20; j++) {
             System.out.print(boarderOutline);
         }
         System.out.println();
     }
 
-    public void ClearScreenLocation(int x, int y) {
+    public void clearScreenLocation(int x, int y) {
         this.screenMatrix[y][x] = "⬜";
     }
 
@@ -70,7 +69,8 @@ public class GameBoard {
     public void setObjectOnLocation(BasicProperties object, int x, int y) {
         this.screenMatrix[y][x] = object.getEmoji();
     }
-    public String[][] returnScreenArray(){
+
+    public String[][] returnScreenArray() {
         return this.screenMatrix;
     }
 }

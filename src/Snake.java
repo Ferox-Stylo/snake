@@ -17,7 +17,7 @@ public class Snake extends BasicProperties {
                 if (newX >= 0 && !Objects.equals(board.getObjectOnLocation(newX, snake.getY()), boarderOutline)) {
                     snake.setX(newX);
                     board.setObjectOnLocation(snake, snake.getX(), snake.getY());
-                    board.ClearScreenLocation(snake.getX() + 1, snake.getY());
+                    board.clearScreenLocation(snake.getX() + 1, snake.getY());
                 } else {
                     GameOver.printScreen();
                 }
@@ -27,7 +27,7 @@ public class Snake extends BasicProperties {
                 if (newX < board.getScreenWidth() && !Objects.equals(board.getObjectOnLocation(newX, snake.getY()), boarderOutline)) {
                     snake.setX(newX);
                     board.setObjectOnLocation(snake, snake.getX(), snake.getY());
-                    board.ClearScreenLocation(snake.getX() - 1, snake.getY());
+                    board.clearScreenLocation(snake.getX() - 1, snake.getY());
                 } else {
                     GameOver.printScreen();
                 }
@@ -37,7 +37,7 @@ public class Snake extends BasicProperties {
                 if (newY >= 0 && !Objects.equals(board.getObjectOnLocation(snake.getX(), newY), boarderOutline)) {
                     snake.setY(newY);
                     board.setObjectOnLocation(snake, snake.getX(), snake.getY());
-                    board.ClearScreenLocation(snake.getX(), snake.getY() + 1);
+                    board.clearScreenLocation(snake.getX(), snake.getY() + 1);
                 } else {
                     GameOver.printScreen();
                 }
@@ -47,7 +47,7 @@ public class Snake extends BasicProperties {
                 if (newY < board.getScreenHeight() && !Objects.equals(board.getObjectOnLocation(snake.getX(), newY), boarderOutline)) {
                     snake.setY(newY);
                     board.setObjectOnLocation(snake, snake.getX(), snake.getY());
-                    board.ClearScreenLocation(snake.getX(), snake.getY() - 1);
+                    board.clearScreenLocation(snake.getX(), snake.getY() - 1);
                 } else {
                     GameOver.printScreen();
                 }
